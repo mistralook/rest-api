@@ -16,10 +16,10 @@
 * Ответ: ```{amount: $(converted_amount)}```.
 
 ### Хранилище данных
-#### json(redis w.i.p)
+#### ``` Redis ```
 
 ### Тесты
 #### W.I.P
 
 ### Docker
-#### W.I.P
+#### ``` docker-compose ```
