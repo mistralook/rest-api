@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  redis:
+    image: redis:latest
+
+
+  converter:
+    build: .
+    depends_on:
+      - redis
+    ports:
+      - "8080:8080"
+    links:
+      - redis
+    environment:
+      - PYTHONBUFFERED=1
