@@ -63,7 +63,7 @@ async def fulfill_database(request: web.Request):
         try:
             data = await request.json()
         except json.decoder.JSONDecodeError as e:
-            return {'status': 400, 'reason': str(e)}
+            return {'status': 400, 'reason': 'malformed json', 'problem': str(e)}
         await redis.mset(data)
         return {'status': 200}
     elif is_merge == 0:
